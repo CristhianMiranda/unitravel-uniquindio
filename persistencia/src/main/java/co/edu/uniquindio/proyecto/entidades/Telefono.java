@@ -6,30 +6,19 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
 import java.io.Serializable;
-import java.util.Objects;
-
 @Entity
-@NoArgsConstructor
 @Getter
 @Setter
+@NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class Punto implements Serializable {
-    @Id
-    @EqualsAndHashCode.Include
-    @Min(0)
-    private String cantidad;
-
+public class Telefono implements Serializable {
 
     @ManyToOne
+    @EqualsAndHashCode.Include
+    @JoinColumn(name = "cedulaCliente")
     private Cliente cliente;
-
-    public Punto(String cantidad) {
-        this.cantidad = cantidad;
-    }
 
 }
