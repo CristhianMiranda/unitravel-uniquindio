@@ -5,10 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
@@ -23,18 +20,23 @@ public class Denuncia {
     private String codigo;
 
     @Column(nullable = false,length = 220)
+    private String motivo;
+    @Column(nullable = false,length = 220)
     private String mensaje;
 
+    @JoinColumn(name = "cedulaCliente",nullable = false)
     @ManyToOne
     private Cliente cliente;
 
+    @JoinColumn(name = "codigoHotel",nullable = false)
     @ManyToOne
     private Hotel hotel;
 
 
-    public Denuncia(String codigo, String mensaje) {
+    public Denuncia(String codigo, String mensaje, String motivo) {
         this.codigo = codigo;
         this.mensaje = mensaje;
+        this.motivo = motivo;
     }
 
 }

@@ -30,11 +30,17 @@ public class Comentario {
     @Column(nullable = false)
     private double calificacion;
 
+    @JoinColumn(name = "cedulaCliente")
     @ManyToOne
     private Cliente cliente;
 
+    @JoinColumn(name = "codigoHotel",nullable = false)
+    @ManyToOne
+    private Hotel hotel;
+    /*
     @OneToMany(mappedBy="comentario")
     private List<Hotel> hoteles;
+    */
     @Column(nullable = false)
     private LocalDateTime fechaCalificacion;
 

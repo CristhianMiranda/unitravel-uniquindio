@@ -5,9 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 import java.io.Serializable;
 @Entity
 @Getter
@@ -15,10 +13,18 @@ import java.io.Serializable;
 @NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Telefono implements Serializable {
-
+    @Id
     @ManyToOne
     @EqualsAndHashCode.Include
     @JoinColumn(name = "cedulaCliente")
     private Cliente cliente;
 
+
+    @Id
+    @EqualsAndHashCode.Include
+    private String numeroTelefono;
+
+
+    @Column(length = 200)
+    private String descripcion;
 }

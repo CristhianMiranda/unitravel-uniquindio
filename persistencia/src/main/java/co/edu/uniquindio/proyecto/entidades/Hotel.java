@@ -37,14 +37,21 @@ public class Hotel {
     @OneToMany(mappedBy="hotel")
     private List<Denuncia> denuncia;
 
+
     @ManyToOne
+    @JoinColumn(name = "cedulaAdministradorHotel",nullable = false)
     private AdministradorHotel administradorHotel;
 
+    @OneToMany(mappedBy="hotel")
+    private List<Comentario> comentarios;
+
+    /*
     @ManyToOne
     private Comentario comentario;
-
-    @OneToMany(mappedBy="hotel")
-    private List<Ciudad> ciudades;
+*/
+   // @JoinColumn(name = "codigoCiudad")
+    @ManyToOne
+    private Ciudad ciudad;
 
     @ManyToMany(mappedBy="hoteles")
     private List<Caracteristica> caracteristicas;

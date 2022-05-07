@@ -39,6 +39,10 @@ public class Habitacion implements Serializable {
     @OneToMany(mappedBy="habitacion")
     private List<Foto> fotos;
 
+    @OneToMany(mappedBy="habitacion")
+    private List<ReservaHabitacion> reservaHabitaciones;
+
+
     @ManyToOne
     private Hotel hotel;
     public Habitacion(short numero, String precio, short capacidad) {

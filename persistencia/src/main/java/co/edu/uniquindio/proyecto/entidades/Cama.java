@@ -26,7 +26,7 @@ public class Cama {
     @ManyToMany
     private List<Habitacion> habitaciones;
 
-
+    private boolean tipo;
 
     public Cama(String codigo) {
         this.codigo = codigo;

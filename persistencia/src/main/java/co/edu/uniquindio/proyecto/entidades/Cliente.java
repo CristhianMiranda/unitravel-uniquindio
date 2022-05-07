@@ -5,10 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.List;
 import java.util.Objects;
 
@@ -29,7 +26,14 @@ public class Cliente {
     @OneToMany(mappedBy = "cliente")
     private List<Punto> puntos;
 
-
+    @ManyToOne
+    @JoinColumn(name = "codigoCiudad",nullable = false)
+    private Ciudad ciudad;
+/*
+    @ManyToOne
+    @JoinColumn(name = "cedulaCliente",nullable = false)
+    private Cliente cliente;
+  */
     @OneToMany(mappedBy = "cliente")
     private List<Reserva> reservas;
 
