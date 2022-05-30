@@ -1,9 +1,6 @@
 package co.edu.uniquindio.proyecto.entidades;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -17,28 +14,31 @@ import java.util.Objects;
 @Getter
 @Setter
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@AllArgsConstructor
+@ToString(onlyExplicitlyIncluded = true)
 public class Persona implements Serializable {
+    @ToString.Include
     @Id
     @EqualsAndHashCode.Include
     @Column(length = 10)
     private String cedula;
 
+    @ToString.Include
     @Column(length = 30)
     private String nombre;
 
+
+    @ToString.Include
     @Email
-    @Column(length = 30)
+    @Column(length = 30,nullable = false,unique = true)
     private String email;
-    @Column(length = 50)
+
+
+    @ToString.Include
+    @Column(length = 50,nullable = false)
     private String contraseña;
 
 
 
-    public Persona(String cedula, String nombre, String email, String contraseña) {
-        this.cedula = cedula;
-        this.nombre = nombre;
-        this.email = email;
-        this.contraseña = contraseña;
-    }
 
 }

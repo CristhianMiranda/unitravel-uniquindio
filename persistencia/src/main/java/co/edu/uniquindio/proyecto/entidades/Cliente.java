@@ -1,11 +1,10 @@
 package co.edu.uniquindio.proyecto.entidades;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
 
@@ -13,12 +12,14 @@ import java.util.Objects;
 @NoArgsConstructor
 @Getter
 @Setter
-@EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class Cliente {
-    @Id
-    @EqualsAndHashCode.Include
-    @Column(length = 10)
-    private String cedula;
+@EqualsAndHashCode(callSuper=false)
+//@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@ToString(callSuper = true, onlyExplicitlyIncluded = true)
+public class Cliente extends Persona implements Serializable {
+    @ToString.Include
+    @ElementCollection
+    private List<String> telefono;
+
 
     @OneToMany(mappedBy = "cliente")
     private List<Comentario> comentarios;
@@ -40,9 +41,10 @@ public class Cliente {
     @OneToMany(mappedBy = "cliente")
     private List<Denuncia> denuncias;
 
-    public Cliente(String cedula) {
-        this.cedula = cedula;
+
+
+
+    public Cliente(String cedula, String nombre, @Email String email, String contraseña) {
+        super(cedula, nombre, email, contraseña);
     }
-
-
 }
