@@ -12,13 +12,15 @@ import java.util.Objects;
 @NoArgsConstructor
 @Getter
 @Setter
-@EqualsAndHashCode(callSuper=false)
-//@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+
+//@EqualsAndHashCode(callSuper=true)
 @ToString(callSuper = true, onlyExplicitlyIncluded = true)
 public class Cliente extends Persona implements Serializable {
     @ToString.Include
     @ElementCollection
     private List<String> telefono;
+
 
 
     @OneToMany(mappedBy = "cliente")
@@ -30,11 +32,11 @@ public class Cliente extends Persona implements Serializable {
     @ManyToOne
     @JoinColumn(name = "codigoCiudad",nullable = false)
     private Ciudad ciudad;
-/*
+
     @ManyToOne
     @JoinColumn(name = "cedulaCliente",nullable = false)
     private Cliente cliente;
-  */
+
     @OneToMany(mappedBy = "cliente")
     private List<Reserva> reservas;
 

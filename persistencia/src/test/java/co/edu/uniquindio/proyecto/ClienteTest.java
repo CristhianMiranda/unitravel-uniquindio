@@ -43,17 +43,17 @@ public class ClienteTest {
         Assertions.assertNull(clienteBuscado);
 
     }
-    //@Sql("classpath:dataset.sql")
+
     @Test
     public void actualizar()
     {
         Cliente cliente = new Cliente("1010125168", "Paola Andrea Ruiz Londoño", "crishtianandres2001@gmail.com", "Andres1805") ;
+     //  Cliente cliente = new Cliente("1010125168") ;
         Cliente clienteGuardado = clienteRepo.save(cliente);
-
 
         clienteGuardado.setContraseña("lolotro");
 
-        clienteRepo.save(clienteGuardado);
+      clienteRepo.save(clienteGuardado);
 
 
         //Por último, verificamos que si haya quedado borrado
@@ -62,10 +62,18 @@ public class ClienteTest {
         Assertions.assertEquals("lolotro", clienteBuscado.getContraseña());
 
     }
-    @Sql("classpath:clientes.sql")
+    @Sql("classpath:dataset.sql")
     @Test
     public void listar()
     {
+        Cliente cliente = new Cliente("1010125138", "Paola Andrea Ruiz Londoño", "crishtianandres2401@gmail.com", "Andres1805") ;
+        Cliente clienteGuardado = clienteRepo.save(cliente);
+
+
+       /* Cliente cliente1 = new Cliente("1010125168", "Paola Andrea Ruiz Londoño", "crishtianandres2001@gmail.com", "Andres1805") ;
+         clienteRepo.save(cliente1);
+*/
+
 
         List<Cliente> clientes = clienteRepo.findAll();
         System.out.println(clientes);
