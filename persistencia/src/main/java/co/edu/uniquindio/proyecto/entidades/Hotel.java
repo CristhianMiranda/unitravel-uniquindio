@@ -1,9 +1,6 @@
 package co.edu.uniquindio.proyecto.entidades;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.Max;
@@ -16,22 +13,28 @@ import java.util.Objects;
 @Setter
 @NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@ToString(onlyExplicitlyIncluded = true)
 public class Hotel {
     @Id
     @EqualsAndHashCode.Include
     @Column(length = 200)
+    @ToString.Include
     private String codigo;
     @Column(length = 50)
+    @ToString.Include
     private String nombre;
 
     @Column(length = 50)
+    @ToString.Include
     private String direccion;
 
     @Column(length = 10,unique = true)
+    @ToString.Include
     private String telefono;
 
     @Min(0)
     @Max(5)
+    @ToString.Include
     private short numeroEstrellas;
 
     @OneToMany(mappedBy="hotel")
@@ -39,6 +42,7 @@ public class Hotel {
 
 
     @ManyToOne
+
     @JoinColumn(name = "cedulaAdministradorHotel",nullable = false)
     private AdministradorHotel administradorHotel;
 

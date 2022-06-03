@@ -5,15 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c7db0cf-f859-4454-8150-2afa77714773" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/UsuarioRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/persistencia/src/test/java/co/edu/uniquindio/proyecto/UsuarioTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/persistencia/src/test/resources/dataset.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/HotelRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/servicios/UsuarioServicio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/servicios/UsuarioServicioImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/persistencia/src/test/java/co/edu/uniquindio/proyecto/HotelTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/persistencia/src/test/java/co/edu/uniquindio/proyecto/UsuarioServicioTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Ciudad.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Ciudad.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Comentario.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Comentario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Hotel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Persona.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Reserva.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Reserva.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/ClienteRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/ClienteRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/UsuarioRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/UsuarioRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/persistencia/src/test/java/co/edu/uniquindio/proyecto/ClienteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/test/java/co/edu/uniquindio/proyecto/ClienteTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/test/resources/clientes.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/src/test/java/co/edu/uniquindio/proyecto/UsuarioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/test/java/co/edu/uniquindio/proyecto/UsuarioTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/src/test/resources/dataset.sql" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/test/resources/dataset.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,8 +117,8 @@
       <recent name="G:\programas\IdeaProjects\unitravel\persistencia\src\main\java" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.UsuarioTest.listarUsuariosTest">
-    <configuration name="ClienteTest.actualizar" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.HotelTest.obtenerListaHotel">
+    <configuration name="ClienteTest.ListaReservas" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -122,30 +131,7 @@
           <list>
             <option value=":persistencia:test" />
             <option value="--tests" />
-            <option value="&quot;co.edu.uniquindio.proyecto.ClienteTest.actualizar&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="ClienteTest.eliminar" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":persistencia:test" />
-            <option value="--tests" />
-            <option value="&quot;co.edu.uniquindio.proyecto.ClienteTest.eliminar&quot;" />
+            <option value="&quot;co.edu.uniquindio.proyecto.ClienteTest.ListaReservas&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -178,6 +164,52 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="HotelTest.obtenerListaHotel" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":persistencia:test" />
+            <option value="--tests" />
+            <option value="&quot;co.edu.uniquindio.proyecto.HotelTest.obtenerListaHotel&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="UsuarioTest.ListaReservas" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":persistencia:test" />
+            <option value="--tests" />
+            <option value="&quot;co.edu.uniquindio.proyecto.UsuarioTest.ListaReservas&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="UsuarioTest.listarUsuariosTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -201,29 +233,6 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="UsuarioTest.registrarUsuarioTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":persistencia:test" />
-            <option value="--tests" />
-            <option value="&quot;co.edu.uniquindio.proyecto.UsuarioTest.registrarUsuarioTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <configuration name="PersistenciaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="unitravel.persistencia.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="co.edu.uniquindio.proyecto.PersistenciaApplication" />
@@ -233,11 +242,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.HotelTest.obtenerListaHotel" />
+        <item itemvalue="Gradle.UsuarioTest.ListaReservas" />
         <item itemvalue="Gradle.UsuarioTest.listarUsuariosTest" />
         <item itemvalue="Gradle.ClienteTest.listar (1)" />
-        <item itemvalue="Gradle.UsuarioTest.registrarUsuarioTest" />
-        <item itemvalue="Gradle.ClienteTest.actualizar" />
-        <item itemvalue="Gradle.ClienteTest.eliminar" />
+        <item itemvalue="Gradle.ClienteTest.ListaReservas" />
       </list>
     </recent_temporary>
   </component>
@@ -263,7 +272,12 @@
       <workItem from="1653883163741" duration="1560000" />
       <workItem from="1653887335130" duration="2341000" />
       <workItem from="1653939449065" duration="890000" />
-      <workItem from="1653953087219" duration="10304000" />
+      <workItem from="1653953087219" duration="11498000" />
+      <workItem from="1654059428616" duration="2114000" />
+      <workItem from="1654111678525" duration="1428000" />
+      <workItem from="1654152352221" duration="2156000" />
+      <workItem from="1654197973354" duration="1307000" />
+      <workItem from="1654220523640" duration="17716000" />
     </task>
     <servers />
   </component>
@@ -280,5 +294,25 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/PersistenciaApplication.java</url>
+          <line>6</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/persistencia/src/test/java/co/edu/uniquindio/proyecto/HotelTest.java</url>
+          <line>25</line>
+          <properties class="co.edu.uniquindio.proyecto.HotelTest" method="obtenerListaHotel">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

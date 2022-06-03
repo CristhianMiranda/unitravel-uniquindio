@@ -20,6 +20,11 @@ public class Usuario extends Persona implements Serializable {
     @ElementCollection
     private List<String> telefono;
 
+    @OneToMany(mappedBy = "usuario")
+    private List<Reserva> reservas;
+
+    @OneToMany(mappedBy = "usuario")
+    private List<Comentario> comentarios;
 
     public Usuario(String cedula, String nombre, @Email String email, String contraseña) {
         super(cedula, nombre, email, contraseña);

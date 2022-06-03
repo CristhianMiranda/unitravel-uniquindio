@@ -29,10 +29,23 @@ public class Comentario {
     @Max(5)
     @Column(nullable = false)
     private double calificacion;
-
+/*
     @JoinColumn(name = "cedulaCliente")
     @ManyToOne
     private Cliente cliente;
+*/
+
+    @JoinColumn(name = "cedulaUsuario")
+    @ManyToOne
+    private Usuario usuario;
+
+
+
+
+
+
+
+
 
     @JoinColumn(name = "codigoHotel",nullable = false)
     @ManyToOne

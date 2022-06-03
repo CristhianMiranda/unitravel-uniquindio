@@ -15,9 +15,9 @@ import java.util.Objects;
 @AllArgsConstructor
 @MappedSuperclass
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
-//@ToString(onlyExplicitlyIncluded = true)
+@ToString(onlyExplicitlyIncluded = true)
 public class Persona implements Serializable {
-  //  @ToString.Include
+ @ToString.Include
     @Id
     @EqualsAndHashCode.Include
     @Column(length = 10)
@@ -28,13 +28,13 @@ public class Persona implements Serializable {
     private String nombre;
 
 
-   // @ToString.Include
+   @ToString.Include
     @Email
     @Column(length = 30,nullable = false,unique = true)
     private String email;
 
 
- //   @ToString.Include
+@ToString.Include
     @Column(length = 50,nullable = false)
     private String contraseña;
 

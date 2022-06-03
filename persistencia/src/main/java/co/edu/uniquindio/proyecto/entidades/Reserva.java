@@ -1,9 +1,6 @@
 package co.edu.uniquindio.proyecto.entidades;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.Future;
@@ -20,27 +17,34 @@ import java.util.Objects;
 @Setter
 @NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@ToString(onlyExplicitlyIncluded = true)
 public class Reserva implements Serializable {
     @Id
     @EqualsAndHashCode.Include
     @Column(length = 10)
+    @ToString.Include
     private String codigo;
 
     @Column(nullable = false)
-    private LocalDateTime fechaReserva;
+    @ToString.Include
+    private LocalDate fechaReserva;
 
     @FutureOrPresent
     @Column(nullable = false)
+    @ToString.Include
     private LocalDate fechaInicio;
     @Future
     @Column(nullable = false)
+    @ToString.Include
     private LocalDate fechaFin;
 
     @Positive
+    @ToString.Include
     private float precioTotal;
+    @ToString.Include
+    private String estado;
 
-    private boolean estado;
-
+    @ToString.Include
     private short cantidadPersonas;
 
     @OneToMany(mappedBy="reserva")
@@ -50,12 +54,28 @@ public class Reserva implements Serializable {
     private List<ReservaHabitacion> reservaHabitaciones;
 
 
-
+/*
     @ManyToOne
     @JoinColumn(name = "cedulaCliente",nullable = false)
     private Cliente cliente;
 
-    public Reserva(String codigo, LocalDateTime fechaReserva, LocalDate fechaInicio, LocalDate fechaFin, float precioTotal, boolean estado, short cantidadPersonas) {
+
+
+*/
+
+
+
+    @ManyToOne
+    @JoinColumn(name = "cedulaUsuario",nullable = false)
+    private Usuario usuario;
+
+
+
+
+
+
+
+    public Reserva(String codigo, LocalDate fechaReserva, LocalDate fechaInicio, LocalDate fechaFin, float precioTotal, String estado, short cantidadPersonas) {
         this.codigo = codigo;
         this.fechaReserva = fechaReserva;
         this.fechaInicio = fechaInicio;

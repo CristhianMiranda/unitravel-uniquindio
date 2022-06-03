@@ -2,6 +2,7 @@ package co.edu.uniquindio.proyecto;
 
 
 import co.edu.uniquindio.proyecto.entidades.Cliente;
+import co.edu.uniquindio.proyecto.entidades.Reserva;
 import co.edu.uniquindio.proyecto.repositorios.ClienteRepo;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -66,9 +67,9 @@ public class ClienteTest {
     @Test
     public void listar()
     {
-        Cliente cliente = new Cliente("1010125138", "Paola Andrea Ruiz Londoño", "crishtianandres2401@gmail.com", "Andres1805") ;
+        /*Cliente cliente = new Cliente("1010125138", "Paola Andrea Ruiz Londoño", "crishtianandres2401@gmail.com", "Andres1805") ;
         Cliente clienteGuardado = clienteRepo.save(cliente);
-
+*/
 
        /* Cliente cliente1 = new Cliente("1010125168", "Paola Andrea Ruiz Londoño", "crishtianandres2001@gmail.com", "Andres1805") ;
          clienteRepo.save(cliente1);
@@ -78,5 +79,15 @@ public class ClienteTest {
         List<Cliente> clientes = clienteRepo.findAll();
         System.out.println(clientes);
     }
+    @Sql("classpath:dataset.sql")
+    @Test
+    public void ListaReservas()
+    {
+      //List<Reserva> reservas = clienteRepo.obtenerListaReservas("pepe@email.com");
 
+
+       /* Cliente cliente = (Cliente) clienteRepo.obtenerListaReservas("pepe@email.com");*/
+      //  reservas.forEach(System.out::println);
+
+    }
 }

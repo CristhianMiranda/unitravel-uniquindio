@@ -30,8 +30,8 @@ public class Ciudad implements Serializable {
 /*
 @OneToMany(mappedBy = "cliente")
     private List<Reserva> reservas;
- */
 
+*/
     @OneToMany(mappedBy="ciudad")
     private List<Hotel> hoteles;
 

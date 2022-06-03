@@ -22,24 +22,24 @@ public class Cliente extends Persona implements Serializable {
     private List<String> telefono;
 
 
-
+/*
     @OneToMany(mappedBy = "cliente")
     private List<Comentario> comentarios;
-
+*/
     @OneToMany(mappedBy = "cliente")
     private List<Punto> puntos;
 
     @ManyToOne
     @JoinColumn(name = "codigoCiudad",nullable = false)
     private Ciudad ciudad;
-
+/*
     @ManyToOne
     @JoinColumn(name = "cedulaCliente",nullable = false)
     private Cliente cliente;
-
-    @OneToMany(mappedBy = "cliente")
+*/
+  /*  @OneToMany(mappedBy = "cliente")
     private List<Reserva> reservas;
-
+*/
     @OneToMany(mappedBy = "cliente")
     private List<Denuncia> denuncias;
 
