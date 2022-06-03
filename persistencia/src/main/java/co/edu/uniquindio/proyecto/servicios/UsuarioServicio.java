@@ -7,6 +7,8 @@ import java.util.List;
 public interface UsuarioServicio {
     Usuario registraUsuario(Usuario usuario) throws Exception;
     Usuario obtenerUsuario(String cedula);
+
+    Usuario validadLogin(String email, String password) throws Exception;
 /*
     Usuario registrarUsuario(Usuario usuario) throws Exception;
 

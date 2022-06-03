@@ -19,21 +19,52 @@ public class UsuarioServicioImpl implements UsuarioServicio{
 
     @Override
     public Usuario registraUsuario(Usuario usuario) throws Exception {
-
-
         if(obtenerUsuario(usuario.getCedula())!=null)
         {
-            throw new Exception("El usuario ya esta registraado");
+           throw new Exception("El usuario ya esta registraado");
+
+        }
+        if(obtenerCorreo(usuario.getEmail())!=null)
+        {
+            throw new Exception("El correo ya esta registraado");
+
         }
 
+           return usuarioRepo.save(usuario);
 
-        return usuarioRepo.save(usuario);
     }
 
+    @Override
+    public Usuario validadLogin(String email, String password) throws Exception {
+    Optional<Usuario> usuario = usuarioRepo.findByEmailAndContraseña(email,password);
+    if(usuario.isEmpty())
+    {
+        throw new Exception("El correo y/o contraseña son incorrectos");
+    }
+    return usuario.get();
+    }
+
+
+    public Usuario obtenerCorreo(String email)
+    {
+        return usuarioRepo.findAllByEmail(email).orElse(null);
+    }
+
+    public Usuario obtenerEmail(String correo)
+
+    {
+        return usuarioRepo.obtenerEmail(correo);
+    }
     @Override
     public Usuario obtenerUsuario(String cedula) {
         return usuarioRepo.findById(cedula).orElse(null);
     }
+
+
+
+
+
+
 /*
     @Override
     public Usuario registrarUsuario(Usuario usuario) throws Exception {

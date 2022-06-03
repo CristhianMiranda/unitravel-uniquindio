@@ -21,7 +21,7 @@ public class UsuarioServicioTest {
     @Sql("classpath:dataset.sql")
     @Test
     public void registrarUsuarioTest() {
-    Usuario usuario = new Usuario("234","carlos","papo@email.com","perosq");
+    Usuario usuario = new Usuario("456","cristhian  miranda ","cristhian@email.com","andres1805");
         try {
             usuarioServicio.registraUsuario(usuario);
         } catch (Exception e) {
@@ -29,6 +29,21 @@ public class UsuarioServicioTest {
         }
 
     }
+
+    @Sql("classpath:dataset.sql")
+    @Test
+    public void validarLogin() {
+        Usuario usuario = new Usuario();
+        usuario.setEmail("pedro@email.com");
+        usuario.setContraseña("palopero");
+        try {
+            usuarioServicio.validadLogin(usuario.getEmail(),usuario.getContraseña());
+            System.out.println("Estas logeado");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 /*
     @Sql("classpath:dataset.sql")
     @Test

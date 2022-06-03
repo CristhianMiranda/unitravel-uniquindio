@@ -7,12 +7,9 @@
     <list default="true" id="9c7db0cf-f859-4454-8150-2afa77714773" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/UsuarioRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/UsuarioRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/servicios/ClienteServicio.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/servicios/ClienteServicioImpl.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/servicios/UsuarioServicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/servicios/UsuarioServicio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/servicios/UsuarioServicioImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/servicios/UsuarioServicioImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/persistencia/src/test/java/co/edu/uniquindio/proyecto/UsuarioServicioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/test/java/co/edu/uniquindio/proyecto/UsuarioServicioTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/test/resources/dataset.sql" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/test/resources/dataset.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,53 +113,7 @@
       <recent name="co.edu.uniquindio.proyecto.servicios" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.UsuarioTest.listarUsuariosTest">
-    <configuration name="UsuarioServicioTest.eliminarUsuarioTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":persistencia:test" />
-            <option value="--tests" />
-            <option value="&quot;co.edu.uniquindio.proyecto.UsuarioServicioTest.eliminarUsuarioTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="UsuarioServicioTest.nada" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":persistencia:test" />
-            <option value="--tests" />
-            <option value="&quot;co.edu.uniquindio.proyecto.UsuarioServicioTest.nada&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Gradle.UsuarioServicioTest.validarLogin">
     <configuration name="UsuarioServicioTest.registrarUsuarioTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -177,6 +128,52 @@
             <option value=":persistencia:test" />
             <option value="--tests" />
             <option value="&quot;co.edu.uniquindio.proyecto.UsuarioServicioTest.registrarUsuarioTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="UsuarioServicioTest.validarCorreoYContrasena" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":persistencia:test" />
+            <option value="--tests" />
+            <option value="&quot;co.edu.uniquindio.proyecto.UsuarioServicioTest.validarCorreoYContrasena&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="UsuarioServicioTest.validarLogin" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":persistencia:test" />
+            <option value="--tests" />
+            <option value="&quot;co.edu.uniquindio.proyecto.UsuarioServicioTest.validarLogin&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -241,11 +238,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.UsuarioTest.listarUsuariosTest" />
-        <item itemvalue="Gradle.UsuarioTest.ListaReservas" />
+        <item itemvalue="Gradle.UsuarioServicioTest.validarLogin" />
         <item itemvalue="Gradle.UsuarioServicioTest.registrarUsuarioTest" />
-        <item itemvalue="Gradle.UsuarioServicioTest.nada" />
-        <item itemvalue="Gradle.UsuarioServicioTest.eliminarUsuarioTest" />
+        <item itemvalue="Gradle.UsuarioServicioTest.validarCorreoYContrasena" />
+        <item itemvalue="Gradle.UsuarioTest.ListaReservas" />
+        <item itemvalue="Gradle.UsuarioTest.listarUsuariosTest" />
       </list>
     </recent_temporary>
   </component>
@@ -276,7 +273,7 @@
       <workItem from="1654111678525" duration="1428000" />
       <workItem from="1654152352221" duration="2156000" />
       <workItem from="1654197973354" duration="1307000" />
-      <workItem from="1654220523640" duration="24635000" />
+      <workItem from="1654220523640" duration="30674000" />
     </task>
     <servers />
   </component>

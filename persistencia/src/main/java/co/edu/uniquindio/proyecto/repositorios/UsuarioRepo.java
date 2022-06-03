@@ -14,7 +14,18 @@ public interface UsuarioRepo extends JpaRepository<Usuario, String> {
 
     @Query("select r from Usuario u, IN(u.reservas) r where u.cedula = :cedula ")
     List<Reserva> obtenerListaReservas(String cedula);
-/*
+
+
+    Optional<Usuario> findAllByEmail(String email);
+
+/*@Query("select h from Usuario h where h.email = :email and h.contraseña = :password")
+    Usuario obtenerCorreoAndPassword(String email,String password);
+*/
+    Optional<Usuario> findByEmailAndContraseña(String email, String password);
+
+    @Query("select u.email from Usuario u where u.email = :email")
+    Usuario obtenerEmail(String email);
+    /*
     Optional<Usuario> findByCorreo(String email);
 
 
