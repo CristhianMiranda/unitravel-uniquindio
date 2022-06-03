@@ -5,7 +5,9 @@ import co.edu.uniquindio.proyecto.entidades.Usuario;
 import java.util.List;
 
 public interface UsuarioServicio {
-
+    Usuario registraUsuario(Usuario usuario) throws Exception;
+    Usuario obtenerUsuario(String cedula);
+/*
     Usuario registrarUsuario(Usuario usuario) throws Exception;
 
     Usuario actualizarUsuario(Usuario usuario) throws Exception;
@@ -20,5 +22,5 @@ public interface UsuarioServicio {
 
     Usuario validarLogin(String correo, String password) throws Exception;
 
-
+*/
 }

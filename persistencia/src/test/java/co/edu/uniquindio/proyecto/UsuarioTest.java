@@ -42,7 +42,7 @@ public class UsuarioTest {
     @Test
     public void ListaReservas()
     {
-        List<Reserva> reservas = usuarioRepo.obtenerListaReservas("234");
+        List<Reserva> reservas = usuarioRepo.obtenerListaReservas("456");
 
 
         /* Cliente cliente = (Cliente) clienteRepo.obtenerListaReservas("pepe@email.com");*/

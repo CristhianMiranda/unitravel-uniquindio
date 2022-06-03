@@ -3,7 +3,6 @@ package co.edu.uniquindio.proyecto.servicios;
 
 import co.edu.uniquindio.proyecto.entidades.Usuario;
 import co.edu.uniquindio.proyecto.repositorios.UsuarioRepo;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,13 +11,30 @@ import java.util.Optional;
 @Service
 public class UsuarioServicioImpl implements UsuarioServicio{
 
-    private UsuarioRepo usuarioRepo;
+    private final UsuarioRepo usuarioRepo;
 
-    public UsuarioServicioImpl(UsuarioRepo usuarioRepo)
-    {
+    public UsuarioServicioImpl(UsuarioRepo usuarioRepo) {
         this.usuarioRepo = usuarioRepo;
     }
 
+    @Override
+    public Usuario registraUsuario(Usuario usuario) throws Exception {
+
+
+        if(obtenerUsuario(usuario.getCedula())!=null)
+        {
+            throw new Exception("El usuario ya esta registraado");
+        }
+
+
+        return usuarioRepo.save(usuario);
+    }
+
+    @Override
+    public Usuario obtenerUsuario(String cedula) {
+        return usuarioRepo.findById(cedula).orElse(null);
+    }
+/*
     @Override
     public Usuario registrarUsuario(Usuario usuario) throws Exception {
         Usuario buscado = obtenerUsuario(usuario.getCedula());
@@ -32,6 +48,7 @@ public class UsuarioServicioImpl implements UsuarioServicio{
         {
             throw new Exception("El email ya esta registrado");
         }
+
         return usuarioRepo.save(usuario);
     }
 
@@ -88,5 +105,5 @@ public class UsuarioServicioImpl implements UsuarioServicio{
         return usuario.get();
     }
 
-
+*/
 }
