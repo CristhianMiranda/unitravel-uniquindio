@@ -9,6 +9,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
@@ -16,7 +17,7 @@ import java.util.Objects;
 @Getter
 @Setter
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class Foto {
+public class Foto implements Serializable {
     @Id
     @EqualsAndHashCode.Include
     @Column(length = 10)

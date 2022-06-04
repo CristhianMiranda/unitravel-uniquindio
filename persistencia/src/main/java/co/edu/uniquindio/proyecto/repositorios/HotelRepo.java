@@ -1,5 +1,6 @@
 package co.edu.uniquindio.proyecto.repositorios;
 
+import co.edu.uniquindio.proyecto.entidades.Ciudad;
 import co.edu.uniquindio.proyecto.entidades.Hotel;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -11,6 +12,10 @@ public interface HotelRepo extends JpaRepository<Hotel, String> {
     @Query("select c.hoteles from Hotel h,IN(h.ciudad) c where h.ciudad.codigo = :ciudadCodigo")
     List<Hotel> obtenerListaHoteles(String ciudadCodigo);
 
+
+
+    @Query("select h from Hotel h where h.nombre = :nombreHotel")
+    Hotel obtenerHotel(String nombreHotel);
 
 
 }

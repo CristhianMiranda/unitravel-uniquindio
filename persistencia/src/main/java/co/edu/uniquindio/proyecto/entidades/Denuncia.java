@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
@@ -13,7 +14,7 @@ import java.util.Objects;
 @Getter
 @Setter
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class Denuncia {
+public class Denuncia implements Serializable {
     @Id
     @Column(length = 6)
     @EqualsAndHashCode.Include

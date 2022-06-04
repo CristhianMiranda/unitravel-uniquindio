@@ -25,6 +25,10 @@ public interface UsuarioRepo extends JpaRepository<Usuario, String> {
 
     @Query("select u.email from Usuario u where u.email = :email")
     Usuario obtenerEmail(String email);
+
+
+    @Query("select u from Usuario u where u.email = :email")
+    Usuario recuperarContrasena(String email);
     /*
     Optional<Usuario> findByCorreo(String email);
 

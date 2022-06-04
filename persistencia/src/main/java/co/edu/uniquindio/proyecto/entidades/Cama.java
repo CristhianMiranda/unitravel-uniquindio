@@ -9,6 +9,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
 
@@ -17,7 +18,7 @@ import java.util.Objects;
 @Setter
 @NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class Cama {
+public class Cama implements Serializable {
     @Id
     @EqualsAndHashCode.Include
     @Column(length = 2)

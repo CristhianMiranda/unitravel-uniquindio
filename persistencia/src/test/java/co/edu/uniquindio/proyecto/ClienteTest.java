@@ -2,8 +2,6 @@ package co.edu.uniquindio.proyecto;
 
 
 import co.edu.uniquindio.proyecto.entidades.Cliente;
-import co.edu.uniquindio.proyecto.entidades.Reserva;
-import co.edu.uniquindio.proyecto.repositorios.ClienteRepo;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,14 +9,13 @@ import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabas
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.jdbc.Sql;
 
-import javax.validation.constraints.Email;
 import java.util.List;
 
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 
 public class ClienteTest {
-
+/*
     @Autowired
     private ClienteRepo clienteRepo;
 
@@ -75,7 +72,7 @@ public class ClienteTest {
          clienteRepo.save(cliente1);
 */
 
-
+/*
         List<Cliente> clientes = clienteRepo.findAll();
         System.out.println(clientes);
     }
@@ -89,5 +86,5 @@ public class ClienteTest {
        /* Cliente cliente = (Cliente) clienteRepo.obtenerListaReservas("pepe@email.com");*/
       //  reservas.forEach(System.out::println);
 
-    }
+   // }
 }

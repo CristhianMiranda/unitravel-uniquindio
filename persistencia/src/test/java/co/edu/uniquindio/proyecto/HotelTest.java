@@ -20,7 +20,7 @@ public class HotelTest {
     @Autowired
     private HotelRepo hotelRepo;
 
-
+//Listar todos los hoteles por cada destino
     @Sql("classpath:dataset.sql")
     @Test
     public void obtenerListaHotel()

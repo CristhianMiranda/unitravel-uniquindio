@@ -1,7 +1,12 @@
 package co.edu.uniquindio.proyecto.servicios;
 
 
+import co.edu.uniquindio.proyecto.entidades.Ciudad;
+import co.edu.uniquindio.proyecto.entidades.Hotel;
+import co.edu.uniquindio.proyecto.entidades.Reserva;
 import co.edu.uniquindio.proyecto.entidades.Usuario;
+import co.edu.uniquindio.proyecto.repositorios.CiudadRepo;
+import co.edu.uniquindio.proyecto.repositorios.HotelRepo;
 import co.edu.uniquindio.proyecto.repositorios.UsuarioRepo;
 import org.springframework.stereotype.Service;
 
@@ -12,9 +17,14 @@ import java.util.Optional;
 public class UsuarioServicioImpl implements UsuarioServicio{
 
     private final UsuarioRepo usuarioRepo;
+    private final HotelRepo hotelRepo;
 
-    public UsuarioServicioImpl(UsuarioRepo usuarioRepo) {
+    private final CiudadRepo ciudadRepo;
+
+    public UsuarioServicioImpl(UsuarioRepo usuarioRepo, HotelRepo hotelRepo, CiudadRepo ciudadRepo) {
         this.usuarioRepo = usuarioRepo;
+        this.hotelRepo = hotelRepo;
+        this.ciudadRepo = ciudadRepo;
     }
 
     @Override
@@ -35,13 +45,56 @@ public class UsuarioServicioImpl implements UsuarioServicio{
     }
 
     @Override
-    public Usuario validadLogin(String email, String password) throws Exception {
+    public Usuario validarLogin(String email, String password) throws Exception {
     Optional<Usuario> usuario = usuarioRepo.findByEmailAndContraseña(email,password);
     if(usuario.isEmpty())
     {
         throw new Exception("El correo y/o contraseña son incorrectos");
     }
     return usuario.get();
+    }
+
+    @Override
+    public List<Reserva> listaReservas(String cedula) {
+       // List<Reserva> reservas = listaReservas(cedula);
+
+
+        return usuarioRepo.obtenerListaReservas(cedula);
+    }
+
+    @Override
+    public List<Hotel> obtenerListaHoteles(String ciudadCodigo) {
+
+        return hotelRepo.obtenerListaHoteles(ciudadCodigo);
+    }
+
+    @Override
+    public Ciudad obtenerCiudad(String nombreCiudad) throws Exception {
+        if(ciudadRepo.obtenerCiudad(nombreCiudad)==null)
+        {
+            throw new Exception("La ciudad no se encontro");
+        }
+        return ciudadRepo.obtenerCiudad(nombreCiudad);
+    }
+
+    @Override
+    public Hotel obtenerHotel(String nombreHotel) throws Exception {
+        //System.out.println(hotelRepo.obtenerHotel(nombreHotel).getNombre());
+        if(hotelRepo.obtenerHotel(nombreHotel)==null)
+        {
+            throw new Exception("El hotel no se encontro");
+        }
+        return hotelRepo.obtenerHotel(nombreHotel);
+    }
+
+    @Override
+    public Usuario recuperarContrasena(String email) throws Exception{
+        if(usuarioRepo.recuperarContrasena(email)==null)
+        {
+            throw new Exception("El correo no se encontro asociada a ninguna cuenta");
+        }
+
+        return usuarioRepo.recuperarContrasena(email);
     }
 
 
