@@ -1,15 +1,13 @@
 package co.edu.uniquindio.proyecto.servicios;
 
 
-import co.edu.uniquindio.proyecto.entidades.Ciudad;
-import co.edu.uniquindio.proyecto.entidades.Hotel;
-import co.edu.uniquindio.proyecto.entidades.Reserva;
-import co.edu.uniquindio.proyecto.entidades.Usuario;
-import co.edu.uniquindio.proyecto.repositorios.CiudadRepo;
-import co.edu.uniquindio.proyecto.repositorios.HotelRepo;
-import co.edu.uniquindio.proyecto.repositorios.UsuarioRepo;
+import co.edu.uniquindio.proyecto.entidades.*;
+import co.edu.uniquindio.proyecto.repositorios.*;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.chrono.ChronoLocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -21,10 +19,15 @@ public class UsuarioServicioImpl implements UsuarioServicio{
 
     private final CiudadRepo ciudadRepo;
 
-    public UsuarioServicioImpl(UsuarioRepo usuarioRepo, HotelRepo hotelRepo, CiudadRepo ciudadRepo) {
+    private final DenunciaRepo denunciaRepo;
+    private final ComentarioRepo comentarioRepo;
+
+    public UsuarioServicioImpl(UsuarioRepo usuarioRepo, HotelRepo hotelRepo, CiudadRepo ciudadRepo, DenunciaRepo denunciaRepo, ComentarioRepo comentarioRepo) {
         this.usuarioRepo = usuarioRepo;
         this.hotelRepo = hotelRepo;
         this.ciudadRepo = ciudadRepo;
+        this.denunciaRepo = denunciaRepo;
+        this.comentarioRepo = comentarioRepo;
     }
 
     @Override
@@ -43,6 +46,7 @@ public class UsuarioServicioImpl implements UsuarioServicio{
            return usuarioRepo.save(usuario);
 
     }
+
 
     @Override
     public Usuario validarLogin(String email, String password) throws Exception {
@@ -87,6 +91,16 @@ public class UsuarioServicioImpl implements UsuarioServicio{
         return hotelRepo.obtenerHotel(nombreHotel);
     }
 
+
+    public Hotel obtenerHotelConCodigo(String codigoHotel) throws Exception {
+        //System.out.println(hotelRepo.obtenerHotel(nombreHotel).getNombre());
+        if(hotelRepo.obtenerHotelConCodigo(codigoHotel)==null)
+        {
+            throw new Exception("El codigo de hotel no se encontro");
+        }
+        return hotelRepo.obtenerHotelConCodigo(codigoHotel);
+    }
+
     @Override
     public Usuario recuperarContrasena(String email) throws Exception{
         if(usuarioRepo.recuperarContrasena(email)==null)
@@ -95,6 +109,45 @@ public class UsuarioServicioImpl implements UsuarioServicio{
         }
 
         return usuarioRepo.recuperarContrasena(email);
+    }
+
+    @Override
+    public Denuncia denunciarHotel(String cedulaUsuario, String codigoHotel,String mensaje) throws Exception {
+        if(mensaje.length()>220) {
+            throw new Exception("El mensaje es demasiado largo");
+        }
+        if(mensaje==null||mensaje.equals("")) {
+            throw new Exception("Debes ingresar un mensaje");
+        }
+        System.out.println("prueba");
+        Denuncia denuncia = new Denuncia(mensaje);
+
+        System.out.println("pruebas");
+        denuncia.setUsuario(obtenerUsuario(cedulaUsuario));
+        denuncia.setHotel(obtenerHotelConCodigo(codigoHotel));
+
+        return denunciaRepo.save(denuncia);
+    }
+
+    @Override
+    public Comentario comentarHotel(String cedulaUsuario, String codigoHotel, String mensaje, double calificacion) throws Exception {
+        if(mensaje.length()>220) {
+            throw new Exception("El mensaje es demasiado largo");
+        }
+        if(mensaje==null||mensaje.equals("")) {
+            throw new Exception("Debes ingresar un mensaje");
+        }
+        System.out.println("prueba");
+        Comentario comentario = new Comentario(mensaje,calificacion);
+
+        System.out.println("pruebas");
+        LocalDate tiempo = LocalDate.now();
+      //   System.out.println(tiempo.toString());
+     comentario.setFechaCalificacion(LocalDate.now());
+        comentario.setUsuario(obtenerUsuario(cedulaUsuario));
+        comentario.setHotel(obtenerHotelConCodigo(codigoHotel));
+
+        return comentarioRepo.saveAndFlush(comentario);
     }
 
 

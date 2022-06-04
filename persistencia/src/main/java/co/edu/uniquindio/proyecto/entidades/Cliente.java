@@ -40,8 +40,7 @@ public class Cliente extends Persona implements Serializable {
   /*  @OneToMany(mappedBy = "cliente")
     private List<Reserva> reservas;
 */
-    @OneToMany(mappedBy = "cliente")
-    private List<Denuncia> denuncias;
+
 
 
 

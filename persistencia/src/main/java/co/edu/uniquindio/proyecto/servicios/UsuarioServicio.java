@@ -1,9 +1,6 @@
 package co.edu.uniquindio.proyecto.servicios;
 
-import co.edu.uniquindio.proyecto.entidades.Ciudad;
-import co.edu.uniquindio.proyecto.entidades.Hotel;
-import co.edu.uniquindio.proyecto.entidades.Reserva;
-import co.edu.uniquindio.proyecto.entidades.Usuario;
+import co.edu.uniquindio.proyecto.entidades.*;
 
 import java.util.List;
 
@@ -23,6 +20,7 @@ public interface UsuarioServicio {
 
     /**
      * Metodo para buscar el usuario por medio de la cedula
+     *
      * @param cedula es la identificacion de un usuario
      * @return usuario buscado por cedula
      */
@@ -81,5 +79,28 @@ public interface UsuarioServicio {
      */
     Usuario recuperarContrasena(String email) throws Exception;
 
+    /**
+     * Metodo para hacer una denuncia del usuario a el hotel
+     * @param cedulaUsuario codigo de usuario que denunciara
+     * @param codigoHotel   codigo de hotel denunciado
+     * @param mensaje       mensaje de exposicion de denuncia
+     * @return  una denuncia
+     * @throws Exception    El mensaje es muy corto
+     */
+    Denuncia denunciarHotel(String cedulaUsuario,String codigoHotel,String mensaje) throws Exception;
+
+    /**
+     * Metodo para comentar hotel por usuario
+     * @param cedulaUsuario codigo de usuario que comentara
+     * @param codigoHotel codigo de hotel el cual se comentara
+     * @param mensaje     mensaje de denuncia
+     * @param calificacion calificacion del hotel
+     * @return Comentario realizado
+     * @throws Exception El mensajee es muy corto
+     */
+    Comentario comentarHotel(String cedulaUsuario,String codigoHotel,String mensaje,double calificacion) throws Exception;
+
+  //  Reserva reserva()
+    // Hotel obtenerHotelConCodigo(String codigoHotel)  throws Exception;
 
 }

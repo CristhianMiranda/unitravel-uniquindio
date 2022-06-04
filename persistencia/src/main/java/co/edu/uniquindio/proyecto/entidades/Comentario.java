@@ -9,6 +9,7 @@ import javax.persistence.*;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Objects;
@@ -20,9 +21,10 @@ import java.util.Objects;
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Comentario implements Serializable {
     @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
     @Column(length = 6)
-    private String codigo;
+    private int codigo;
 
     @Column(nullable = false,length = 220)
     private String comentario;
@@ -42,12 +44,6 @@ public class Comentario implements Serializable {
 
 
 
-
-
-
-
-
-
     @JoinColumn(name = "codigoHotel",nullable = false)
     @ManyToOne
     private Hotel hotel;
@@ -56,14 +52,13 @@ public class Comentario implements Serializable {
     private List<Hotel> hoteles;
     */
     @Column(nullable = false)
-    private LocalDateTime fechaCalificacion;
+    private LocalDate fechaCalificacion;
 
 
-    public Comentario(String codigo, String comentario, double calificacion, LocalDateTime fechaCalificacion) {
-        this.codigo = codigo;
+    public Comentario(String comentario, double calificacion/*, LocalDateTime fechaCalificacion*/) {
         this.comentario = comentario;
         this.calificacion = calificacion;
-        this.fechaCalificacion = fechaCalificacion;
+       // this.fechaCalificacion = fechaCalificacion;
     }
 
 }

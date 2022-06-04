@@ -20,10 +20,11 @@ import java.util.Objects;
 @ToString(onlyExplicitlyIncluded = true)
 public class Reserva implements Serializable {
     @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
     @Column(length = 10)
     @ToString.Include
-    private String codigo;
+    private int codigo;
 
     @Column(nullable = false)
     @ToString.Include
@@ -75,7 +76,7 @@ public class Reserva implements Serializable {
 
 
 
-    public Reserva(String codigo, LocalDate fechaReserva, LocalDate fechaInicio, LocalDate fechaFin, float precioTotal, String estado, short cantidadPersonas) {
+    public Reserva(int codigo, LocalDate fechaReserva, LocalDate fechaInicio, LocalDate fechaFin, float precioTotal, String estado, short cantidadPersonas) {
         this.codigo = codigo;
         this.fechaReserva = fechaReserva;
         this.fechaInicio = fechaInicio;

@@ -21,3 +21,6 @@ insert into reserva values ("2",3,"ocupado","2022-06-03","2022-06-02","2022-06-1
 insert into reserva values ("3",4,"ocupado","2022-06-03","2022-06-02","2022-07-18",100000,"456");
 insert into reserva values ("4",2,"disponible","2022-06-03","2022-06-02","2022-08-18",100000,"456");
 
+insert into denuncia values (32,"huele feo el hotel","1","456");
+insert into denuncia values (43,"es pequeño","2","1013125168");
+

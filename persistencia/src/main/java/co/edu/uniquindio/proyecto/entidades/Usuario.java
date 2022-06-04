@@ -26,6 +26,9 @@ public class Usuario extends Persona implements Serializable {
     @OneToMany(mappedBy = "usuario")
     private List<Comentario> comentarios;
 
+    @OneToMany(mappedBy = "usuario")
+    private List<Denuncia> denuncias;
+
     public Usuario(String cedula, String nombre, @Email String email, String contraseña) {
         super(cedula, nombre, email, contraseña);
     }

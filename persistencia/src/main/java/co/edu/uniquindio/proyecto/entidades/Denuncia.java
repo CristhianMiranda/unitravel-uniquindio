@@ -16,28 +16,31 @@ import java.util.Objects;
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Denuncia implements Serializable {
     @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(length = 6)
     @EqualsAndHashCode.Include
-    private String codigo;
-
+    private int codigo;
+/*
     @Column(nullable = false,length = 220)
-    private String motivo;
+    private String motivo;*/
     @Column(nullable = false,length = 220)
     private String mensaje;
 
-    @JoinColumn(name = "cedulaCliente",nullable = false)
+
+
+    @JoinColumn(name = "cedulaUsuario",nullable = false)
     @ManyToOne
-    private Cliente cliente;
+    private Usuario usuario;
 
     @JoinColumn(name = "codigoHotel",nullable = false)
     @ManyToOne
     private Hotel hotel;
 
 
-    public Denuncia(String codigo, String mensaje, String motivo) {
-        this.codigo = codigo;
+    public Denuncia(String mensaje/*, String motivo*/) {
+
         this.mensaje = mensaje;
-        this.motivo = motivo;
+       // this.motivo = motivo;
     }
 
 }

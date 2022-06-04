@@ -5,6 +5,7 @@ import co.edu.uniquindio.proyecto.entidades.Ciudad;
 import co.edu.uniquindio.proyecto.entidades.Hotel;
 import co.edu.uniquindio.proyecto.entidades.Reserva;
 import co.edu.uniquindio.proyecto.entidades.Usuario;
+import co.edu.uniquindio.proyecto.servicios.EmailService;
 import co.edu.uniquindio.proyecto.servicios.UsuarioServicio;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,11 +16,13 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @SpringBootTest
+//@Transactional
 public class UsuarioServicioTest {
 
     @Autowired
     private UsuarioServicio usuarioServicio;
-
+    @Autowired
+    private EmailService emailService;
     @Sql("classpath:dataset.sql")
     @Test
     public void registrarUsuarioTest() {
@@ -101,6 +104,28 @@ public class UsuarioServicioTest {
 
     }
 
+    @Sql("classpath:dataset.sql")
+    @Test
+    public void denunciarHotel()
+    {
+        try {
+            usuarioServicio.denunciarHotel("1013125168","2","S");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+    @Sql("classpath:dataset.sql")
+    @Test
+    public void comentarHotel()
+    {
+        try {
+            usuarioServicio.comentarHotel("456","3","maso",2.6);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
 
     @Sql("classpath:dataset.sql")
     @Test
@@ -130,6 +155,12 @@ public class UsuarioServicioTest {
     }
 
 
+    @Sql("classpath:dataset.sql")
+    @Test
+    public void enviarCorreo()
+    {
+        boolean estado = emailService.enviarEmail("prueba","Este es un mensaje","cristhianmirandapro@gmail.com");
+    }
 /*
     @Sql("classpath:dataset.sql")
     @Test
