@@ -1,23 +1,23 @@
 package co.edu.uniquindio.unitravel.bean;
-import co.edu.uniquindio.proyecto.servicios.*;
-import co.edu.uniquindio.proyecto.entidades.Usuario;
-//import co.edu.uniquindio.proyecto.servicios.UsuarioServicio;
+
+import co.edu.uniquindio.unitravel.entidades.Usuario;
+import co.edu.uniquindio.unitravel.servicios.UsuarioServicio;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
 import java.io.Serializable;
-
-@ComponentScan
+@Component
 @ViewScoped
-public class UsuarioBean implements Serializable{
+public class UsuarioBean implements Serializable {
+    //   private String mensaje = "Mi primera página en JSF";
 
 
-/*
     @Autowired
     private UsuarioServicio usuarioServicio;
 
@@ -26,21 +26,25 @@ public class UsuarioBean implements Serializable{
     @Getter @Setter
     public Usuario usuario;
 
-    @Getter @Setter
-    public String cedula,email,nombre,contraseña;
+
 
     @PostConstruct
     public void inicializar(){
+
         usuario = new Usuario();
     }
 
     public void registrarUsuario()throws Exception {
         try {
-            System.out.println(usuario.toString());
-            usuarioServicio.registraUsuario(usuario);
-        } catch (Exception e) {
-            System.out.println("PRUEBAsss");
+                usuarioServicio.registraUsuario(usuario);
+                FacesMessage facesMsg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Alerta",
+                        "Registro exitoso");
+                FacesContext.getCurrentInstance().addMessage(null, facesMsg);
+            } catch (Exception e) {
+                FacesMessage facesMsg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Alerta",
+                    e.getMessage());
+            FacesContext.getCurrentInstance().addMessage(null, facesMsg);
             e.printStackTrace();
         }
-    }*/
+    }
 }

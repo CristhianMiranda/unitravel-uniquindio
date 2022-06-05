@@ -12,25 +12,30 @@
     <title>Unitravel inicio</title>
 </h:head>
 <h:body>
-    <h:form>
-        <h:panelGrid columns="2" cellpadding="5">
+   <p:panel header="Registro usuario">
+        <h:form>
+            <h:panelGrid columns="2" cellpadding="5">
 
-            <p:outputLabel value="Nombre"/>
-            <p:inputText value="#{usuariosBean.usuario.nombre}"/>
+                <p:outputLabel value="Nombre" for="nombre_usuario"/>
+                <p:inputText id="nombre_usuario" value="#{usuarioBean.usuario.nombre}" required="true"/>
 
-            <p:outputLabel value="Email"/>
-            <p:inputText value="#{usuariosBean.usuario.email}"/>
+                <p:outputLabel value="Email" for="email_usuario"/>
+                <p:inputText id="email_usuario" type="email" value="#{usuarioBean.usuario.email}" required="true"/>
 
-            <p:outputLabel value="Contrasena"/>
-            <p:inputText value="#{usuariosBean.usuario.contraseña}"/>
+                <p:outputLabel value="Contrasena" for="contrasena_usuario"/>
+                <p:password id="contrasena_usuario" value="#{usuarioBean.usuario.contraseña}" toggleMask="true" redisplay="true" required="true"/>
 
-            <p:outputLabel value="Cedula"/>
-            <p:inputText value="#{usuariosBean.usuario.cedula}"/>
+                <p:outputLabel value="Cedula" for="cedula_usuario"/>
+                <p:inputText id="cedula_usuario" value="#{usuarioBean.usuario.cedula}" required="true"/>
 
 
-        </h:panelGrid>
+            </h:panelGrid>
 
-        <p:commandButton value="Registrar usuario" action="#{usuariosBean.registrarUsuario()}" update="@form"/>
-    </h:form>
+            <p:commandButton value="Registrar usuario" action="#{usuarioBean.registrarUsuario()}" update="@form" icon="pi pi-plus"/>
+
+            <p:growl showDetail="true"/>
+
+        </h:form>
+   </p:panel>
 </h:body>
 </html>
