@@ -6,8 +6,6 @@ import co.edu.uniquindio.proyecto.repositorios.*;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.chrono.ChronoLocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -22,12 +20,15 @@ public class UsuarioServicioImpl implements UsuarioServicio{
     private final DenunciaRepo denunciaRepo;
     private final ComentarioRepo comentarioRepo;
 
-    public UsuarioServicioImpl(UsuarioRepo usuarioRepo, HotelRepo hotelRepo, CiudadRepo ciudadRepo, DenunciaRepo denunciaRepo, ComentarioRepo comentarioRepo) {
+    private final EmailService emailService;
+
+    public UsuarioServicioImpl(UsuarioRepo usuarioRepo, HotelRepo hotelRepo, CiudadRepo ciudadRepo, DenunciaRepo denunciaRepo, ComentarioRepo comentarioRepo, EmailService emailService) {
         this.usuarioRepo = usuarioRepo;
         this.hotelRepo = hotelRepo;
         this.ciudadRepo = ciudadRepo;
         this.denunciaRepo = denunciaRepo;
         this.comentarioRepo = comentarioRepo;
+        this.emailService = emailService;
     }
 
     @Override
@@ -109,6 +110,23 @@ public class UsuarioServicioImpl implements UsuarioServicio{
         }
 
         return usuarioRepo.recuperarContrasena(email);
+    }
+
+
+    @Override
+    public void recuperarContrasenaCorreo(String email) throws Exception{
+        if(usuarioRepo.recuperarContrasena(email)==null)
+        {
+            throw new Exception("El correo no se encontro asociada a ninguna cuenta");
+        }
+        enviarCorreo("Recuperacion de contraseña","Tu contraseña es: "+usuarioRepo.recuperarContrasena(email).getContraseña(),email,usuarioRepo.recuperarContrasena(email).getContraseña());
+
+       // return usuarioRepo.recuperarContrasena(email);
+    }
+
+    public void enviarCorreo(String asunto,String contenido,String destinatario,String datos)
+    {
+        boolean estado = emailService.enviarEmail(asunto,contenido,destinatario,datos);
     }
 
     @Override

@@ -76,8 +76,16 @@ public interface UsuarioServicio {
      * @param email correo de cuenta de usuario
      * @return contraseña de cuenta
      * @throws Exception no existe el correo asociada a ninguna cuenta
-     */
+     *//*
     Usuario recuperarContrasena(String email) throws Exception;
+*/
+     /**NOINOSNOSNOSNOS
+     * Metodo para recuperar la contraseña de la cuenta de usuario con el correo
+     * @param email correo de cuenta de usuario
+     * @return contraseña de cuenta
+     * @throws Exception no existe el correo asociada a ninguna cuenta
+     */
+    void recuperarContrasenaCorreo(String email) throws Exception;
 
     /**
      * Metodo para hacer una denuncia del usuario a el hotel

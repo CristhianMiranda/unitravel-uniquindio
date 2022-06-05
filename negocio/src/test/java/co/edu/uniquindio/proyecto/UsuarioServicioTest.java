@@ -147,7 +147,9 @@ public class UsuarioServicioTest {
         */
         try {
             Usuario recuperado = usuarioServicio.recuperarContrasena("pedro@email.com");
+
             System.out.println(recuperado.getContraseña());
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -159,7 +161,17 @@ public class UsuarioServicioTest {
     @Test
     public void enviarCorreo()
     {
-        boolean estado = emailService.enviarEmail("prueba","Este es un mensaje","cristhianmirandapro@gmail.com");
+        boolean estado = emailService.enviarEmail("prueba","Este es un mensaje","cristhianmirandapro@gmail.com","");
+    }
+
+    @Sql("classpath:dataset.sql")
+    @Test
+    public void recuperarContrasenaCorreo() throws Exception{
+        try {
+            usuarioServicio.recuperarContrasenaCorreo("cristhianmirandapro@gmail.com");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 /*
     @Sql("classpath:dataset.sql")
