@@ -100,6 +100,14 @@ public interface UsuarioServicio {
      */
     Comentario comentarHotel(String cedulaUsuario,String codigoHotel,String mensaje,double calificacion) throws Exception;
 
+    /**NOINOSNOSNOSNOS
+     * Metodo para recuperar la contraseña de la cuenta de usuario con el correo
+     * @param email correo de cuenta de usuario
+     * @return contraseña de cuenta
+     * @throws Exception no existe el correo asociada a ninguna cuenta
+     */
+    void recuperarContrasenaCorreo(String email) throws Exception;
+
   //  Reserva reserva()
     // Hotel obtenerHotelConCodigo(String codigoHotel)  throws Exception;
 

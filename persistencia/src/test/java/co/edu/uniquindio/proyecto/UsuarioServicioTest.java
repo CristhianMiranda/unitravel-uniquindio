@@ -155,11 +155,22 @@ public class UsuarioServicioTest {
     }
 
 
+
+
     @Sql("classpath:dataset.sql")
     @Test
-    public void enviarCorreo()
+    public void enviarCorreo(String asunto,String contenido,String destinatario,String datos)
     {
-        boolean estado = emailService.enviarEmail("prueba","Este es un mensaje","cristhianmirandapro@gmail.com");
+        boolean estado = emailService.enviarEmail(asunto,contenido,destinatario,datos);
+    }
+    @Sql("classpath:dataset.sql")
+    @Test
+    public void recuperarContrasenaCorreo() throws Exception {
+        try {
+            usuarioServicio.recuperarContrasenaCorreo("cristhianmirandapro@gmail.com");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 /*
     @Sql("classpath:dataset.sql")
@@ -203,4 +214,5 @@ public class UsuarioServicioTest {
             e.printStackTrace();
         }
     }*/
+
 }

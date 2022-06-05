@@ -1,7 +1,5 @@
-
-insert into usuario values ("1013125168", "pspsp", "pepes@email.com", "Pepe Perez");
-insert into usuario values ("456", "palopero", "pedro@email.com", "Pedro Martinez");
-
+insert into usuario values ("1013125168", "pspsp", "pepes@yopmail.com", "Pepe Perez");
+insert into usuario values ("456", "palopero", "cristhianmirandapro@gmail.com", "Pedro Martinez");
 
 
 insert into ciudad values ("1","Bogota");
