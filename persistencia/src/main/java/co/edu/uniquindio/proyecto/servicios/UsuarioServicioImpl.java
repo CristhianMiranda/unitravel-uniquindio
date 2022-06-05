@@ -3,6 +3,7 @@ package co.edu.uniquindio.proyecto.servicios;
 
 import co.edu.uniquindio.proyecto.entidades.*;
 import co.edu.uniquindio.proyecto.repositorios.*;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -35,15 +36,17 @@ public class UsuarioServicioImpl implements UsuarioServicio{
     public Usuario registraUsuario(Usuario usuario) throws Exception {
         if(obtenerUsuario(usuario.getCedula())!=null)
         {
+            System.out.println("El usuario ya esta registraado");
            throw new Exception("El usuario ya esta registraado");
 
         }
         if(obtenerCorreo(usuario.getEmail())!=null)
         {
+            System.out.println("El correo ya esta registraado");
             throw new Exception("El correo ya esta registraado");
 
         }
-
+        System.out.println("YEPAAAAAA");
            return usuarioRepo.save(usuario);
 
     }
