@@ -19,18 +19,13 @@
         <h:panelGrid columns="2" cellpadding="5" styleClass="text-white">
             <p:outputLabel style="background: white" value="Email" for="email_usuario"/>
             <p:inputText id="email_usuario" type="email" value="#{usuarioBean.usuario.email}" required="true"/>
-            <p:outputLabel style="background: white" value="Contrasena" for="contrasena_usuario"/>
-            <p:inputText id="contrasena_usuario" type="contrasena" value="#{usuarioBean.usuario.contraseña}" required="true"/>
-
         </h:panelGrid>
-        <li>
-        <p:commandButton value="Iniciar sesion" action="#{usuarioBean.validarLogin()}" update="@form" icon="pi pi-plus"/>
-        <a href="index_logueada.xhtml"> Inicio(una vez logueado)</a></li>
+
+        <p:commandButton value="Enviar un email" action="#{usuarioBean.recuperarContrasena()}" update="@form" icon="pi pi-plus"/>
         <p:growl showDetail="true"/>
     </h:form>
-    <li><a href="registrar_usuario.xhtml">Registrase                  </a></li>
-    <li ><a href="recuperar_contrasena.xhtml"> Recuperar contrasena</a></li>
-
+    <li><a href="logear_usuario.xhtml">Regresar al login                  </a></li>
+    <li type=""><a href="index.xhtml">Ir a inicio</a></li>
 
 
 

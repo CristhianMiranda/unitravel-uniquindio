@@ -50,7 +50,20 @@ public class UsuarioBean implements Serializable {
         }
 
     }
-
+    public void recuperarContrasena() throws Exception
+    {
+        try {
+            usuarioServicio.recuperarContrasenaCorreo(usuario.getEmail());
+            FacesMessage facesMsg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Alerta",
+                    "Correo enviado");
+            FacesContext.getCurrentInstance().addMessage(null, facesMsg);
+        } catch (Exception e) {
+            FacesMessage facesMsg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Alerta",
+                    e.getMessage());
+            FacesContext.getCurrentInstance().addMessage(null, facesMsg);
+            e.printStackTrace();
+        }
+    }
 
     public void registrarUsuario()throws Exception {
         try {

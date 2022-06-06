@@ -5,15 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c7db0cf-f859-4454-8150-2afa77714773" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/index_logueada.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/logear_usuario.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/recuperar_contrasena.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/test/java/co/edu/uniquindio/unitravel/UsuarioServicioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/test/java/co/edu/uniquindio/unitravel/UsuarioServicioTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/unitravel/bean/UsuarioBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/unitravel/bean/UsuarioBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/registrar_usuario.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/registrar_usuario.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/resources/img/icono.png" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/resources/img/icono.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/resources/img/iconos.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/resources/img/iconos.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/index_logueada.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/index_logueada.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/logear_usuario.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/logear_usuario.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -302,6 +299,7 @@
       <workItem from="1654423994023" duration="10914000" />
       <workItem from="1654435601403" duration="12343000" />
       <workItem from="1654468459220" duration="22907000" />
+      <workItem from="1654497135229" duration="3380000" />
     </task>
     <servers />
   </component>
