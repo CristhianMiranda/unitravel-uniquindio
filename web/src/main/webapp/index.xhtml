@@ -13,68 +13,103 @@
     <h:outputStylesheet library="css" name="bootstrap.min.css"/>
     <h:outputStylesheet library="css" name="style.css"/>
     <h:outputStylesheet library="css" name="bootstrap.bundle.min.js"/>
-</h:head>
-<h:body>
 
+</h:head>
+
+<h:body style="background: #000000">
     <div id="encabezado">
-            <div class="px-3 py-2 bg-dark text-white">
+        <div>
+            <div style="color: black" class="px-3 py-0 ql-color-red text-black">
                 <div class="container">
                     <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                         <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
-                            <i class="pi pi-home d-block mx-auto mb-1 icon-menu"></i>
+                            <h:graphicImage library="img" name="icono.png" styleClass="icono-p"/>
+                            <span class="fs-4"></span>
                         </a>
-
                         <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
                             <li>
-                                <a href="#" class="nav-link text-secondary">
+                                <a href="#" class="nav-link text-active">
                                     <i class="pi pi-home d-block mx-auto mb-1 icon-menu"></i>
                                     Home
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="nav-link text-white">
+                                <a href="#" class="nav-link text-info">
                                     <i class="pi pi-plus-circle d-block mx-auto mb-1 icon-menu"></i>
                                     Dashboard
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="nav-link text-white">
+                                <a href="#" class="nav-link text-capitalize">
                                     <i class="pi pi-map d-block mx-auto mb-1 icon-menu"></i>
                                     Orders
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="nav-link text-white">
+                                <a href="#" class="nav-link text-bg-danger">
                                     <i class="pi pi-book d-block mx-auto mb-1 icon-menu"></i>
                                     Products
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="nav-link text-white">
-                                    <i class="pi pi-list d-block mx-auto mb-1 icon-menu"></i>
-                                    Customers
+                                <a href="registrar_usuario.xhtml" class="nav-link text-right">
+                                    <p:commandButton value="Hazte una cuenta" style="background: #191919" type="button" class="btn btn-outline-secondary text-light me-2"></p:commandButton>
                                 </a>
                             </li>
+                            <li>
+                                <a href="#" class="nav-link text-right">
+                                    <button style="background: #191919" type="button" class="btn btn-#191919  text-light me-2">Inicia sesión</button>
+                                </a>
+                            </li>
+
+
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="px-3 py-2 border-bottom mb-3">
-                <div class="container d-flex flex-wrap justify-content-center">
-                    <h:form>
-                            <div class="input-search ui-inputgroup" >
-                        <p:inputText placeholder="¿Que hotel estas buscando?" required="true" value="#{busquedaBean.busqueda}"/>
-                        <p:commandButton update="@form" icon="pi pi-search" action="#{busquedaBean.buscar()}"/>
-                            </div>
-                        <p:growl showDetail="true"/>
-                    </h:form>
+        </div>
+    </div>
 
-                    <div class="text-end">
-                        <button type="button" class="btn btn-light text-dark me-2">Login</button>
-                        <button type="button" class="btn btn-primary">Sign-up</button>
+
+    <div style="background: black" class="card px-3 py-2 border-bottom mb-0">
+        <h:form>
+            <p:growl id="growl" life="2000"/>
+
+            <p:commandLink styleClass="text-white" id="ajax" update="growl" action="#{buttonView.buttonAction}" style="margin-right:20px;">
+                <h:outputText value="Vuelo"/>
+            </p:commandLink>
+
+            <p:commandLink styleClass="text-white" id="ajaxs" update="growl" action="#{buttonView.buttonAction}" style="margin-right:20px;">
+                <h:outputText value="Hotel"/>
+            </p:commandLink>
+        </h:form>
+    </div>
+
+
+
+
+
+    <div style="background: #000000">
+        <div class="px-3 py-2 border-bottom mb-3">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <h:form>
+                    <div class="input-search ui-inputgroup" >
+                        <p:inputText  placeholder="¿Que hotel estas buscando?" required="true" value="#{busquedaBean.busqueda}"/>
+                        <p:commandButton style="background: #191919" class="p py-1" update="@form" icon="pi pi-search" action="#{busquedaBean.buscar()}"/>
                     </div>
-                </div>
+                    <p:growl showDetail="true"/>
+                </h:form>
+                <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+                <li>
+                    <a href="#" class="nav-link text-active">
+                        <p:splitButton type="button" class="btn btn-outline-secondary text-light me-2">Hazte una cuenta</p:splitButton>
+
+                    </a>
+                </li>
+                </ul>
+
             </div>
+        </div>
         <ul>
             <li><a href="">Inicio</a></li>
             <li><a href="registrar_usuario.xhtml">Registrarse</a></li>
@@ -84,7 +119,7 @@
         </ul>
     </div>
 
-    <div id="contenido">
+    <div style="background: #6a1a21" id="contenido">
         <p>Formulario busqueda</p>
         <p>Lista de ciudades</p>
         <p>Hoteles recomendados</p>
@@ -95,5 +130,7 @@
         <p> Unitravel - Universidad del Quindio - 2022 </p>
     </div>
 
+
 </h:body>
+
 </html>

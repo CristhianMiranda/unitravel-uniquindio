@@ -1,4 +1,5 @@
 package co.edu.uniquindio.unitravel.bean;
+import co.edu.uniquindio.unitravel.entidades.Ciudad;
 import co.edu.uniquindio.unitravel.entidades.Hotel;
 import co.edu.uniquindio.unitravel.entidades.Usuario;
 import co.edu.uniquindio.unitravel.servicios.UsuarioServicio;
@@ -13,6 +14,8 @@ import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
 import java.io.Serializable;
+import java.util.List;
+
 @Component
 @ViewScoped
 public class BusquedaBean implements Serializable {
@@ -39,12 +42,23 @@ public class BusquedaBean implements Serializable {
     @Getter @Setter
     private   Hotel hotel;
 
+    @Getter @Setter
+    List<Hotel> hoteles;
+
+    @Setter @Getter
+    private Ciudad ciudad;
+
+
+
+
+
     @PostConstruct
-    public void inicializar(){
+    public void inicializar() throws Exception {
         if(!(busquedaParam ==null))
         {
         try {
-            hotel = usuarioServicio.obtenerHotel(busquedaParam);
+            hoteles = usuarioServicio.obtenerListaHoteles(usuarioServicio.obtenerCiudad(busquedaParam).getCodigo());
+
             FacesMessage facesMsg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Alerta",
                     "Busqueda exitosa");
             FacesContext.getCurrentInstance().addMessage(null, facesMsg);
@@ -54,8 +68,30 @@ public class BusquedaBean implements Serializable {
             FacesContext.getCurrentInstance().addMessage(null, facesMsg);
             e.printStackTrace();
         }
+
+
+
+        /*
+        }else{
+            try {
+            hoteles = (List<Hotel>) usuarioServicio.obtenerHotel(busquedaParam);//usuarioServicio.obtenerListaHoteles(usuarioServicio.obtenerCiudad(busquedaParam).getCodigo());
+            //   hotel = usuarioServicio.obtenerHotel(busquedaParam);
+
+            FacesMessage facesMsg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Alerta",
+                    "Busqueda exitosa");
+            FacesContext.getCurrentInstance().addMessage(null, facesMsg);
+        } catch (Exception e) {
+            FacesMessage facesMsg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Alerta",
+                    e.getMessage());
+            FacesContext.getCurrentInstance().addMessage(null, facesMsg);
+            e.printStackTrace();
+        }*/
+
         }
-    }
+        }
+
+
+
         public String buscar()
         {
             if(busqueda!=null)
@@ -64,7 +100,27 @@ public class BusquedaBean implements Serializable {
             }
             return "resultados_busqueda?faces-redirect=true&amp;busqueda="+busqueda;
         }
+
+
+    @PostConstruct
+    public void inicializars() throws Exception {
+        if(!(busquedaParam ==null))
+        {
+            try {
+                hotel = usuarioServicio.obtenerHotel(busquedaParam);
+
+                FacesMessage facesMsg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Alerta",
+                        "Busqueda hotel exitosa");
+                FacesContext.getCurrentInstance().addMessage(null, facesMsg);
+            } catch (Exception e) {
+                FacesMessage facesMsg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Alerta",
+                        e.getMessage());
+                FacesContext.getCurrentInstance().addMessage(null, facesMsg);
+                e.printStackTrace();
+            }
     }
+    }
+}
 /*
     public void buscarHotel()
     {

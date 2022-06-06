@@ -1,0 +1,102 @@
+<div id="encabezado">
+        <div>
+            <div class="px-3 py-2  text-white">
+                <div class="container">
+                    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                        <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+                            <h:graphicImage library="img" name="icono.png" styleClass="icono-p"/>
+                            <span class="fs-4">Unitravel</span>
+                        </a>
+                        <ul class="pi pi-home d-block mx-auto mb-1 icon-menu">
+                            <li>
+                                <a href="#" class="nav-link text-black">
+                                    <i class="pi pi-home d-block mx-auto mb-1 icon-menu"></i>
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link text-black">
+                                    <i class="pi pi-plus-circle d-block mx-auto mb-1 icon-menu"></i>
+                                    Dashboard
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link text-black">
+                                    <i class="pi pi-map d-block mx-auto mb-1 icon-menu"></i>
+                                    Orders
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link text-black">
+                                    <i class="pi pi-book d-block mx-auto mb-1 icon-menu"></i>
+                                    Products
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link text-black">
+                                    <i class="pi pi-list d-block mx-auto mb-1 icon-menu"></i>
+                                    Customers
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="px-3 py-2 border-bottom mb-3">
+            <div class="container d-flex flex-wrap justify-content-center">
+                <h:form>
+                    <div class="input-search ui-inputgroup" >
+                        <p:inputText placeholder="¿Que hotel estas buscando?" required="true" value="#{busquedaBean.busqueda}"/>
+                        <p:commandButton update="@form" icon="pi pi-search" action="#{busquedaBean.buscar()}"/>
+                    </div>
+                    <p:growl showDetail="true"/>
+                </h:form>
+
+                <div class="text-end">
+                    <button type="button" class="btn btn-light text-dark me-2">Login</button>
+                    <button type="button" class="btn btn-primary">Sign-up</button>
+                </div>
+            </div>
+        </div>
+        <ul>
+            <li><a href="">Inicio</a></li>
+            <li><a href="registrar_usuario.xhtml">Registrarse</a></li>
+            <li><a href="">Crear Hotel</a></li>
+            <li><a href="">Lista hoteles</a></li>
+            <li><a href="">Lista mis reservas</a></li>
+        </ul>
+    </div>
+
+    <div id="contenido">
+        <p>Formulario busqueda</p>
+        <p>Lista de ciudades</p>
+        <p>Hoteles recomendados</p>
+
+    </div>
+
+    <div id="pie_pagina">
+        <p> Unitravel - Universidad del Quindio - 2022 </p>
+    </div>
+
+
+
+
+
+
+
+
+
+                    <p:outputLabel value="Email" for="email_usuario"/>
+                    <p:inputText id="email_usuario" type="email" value="#{usuarioBean.usuario.email}" required="true"/>
+
+                    <p:outputLabel value="Contrasena" for="contrasena_usuario"/>
+                    <p:password id="contrasena_usuario" value="#{usuarioBean.usuario.contraseña}" toggleMask="true" redisplay="true" required="true"/>
+
+                    <p:outputLabel value="Cedula" for="cedula_usuario"/>
+                    <p:inputText id="cedula_usuario" value="#{usuarioBean.usuario.cedula}" required="true"/>
+

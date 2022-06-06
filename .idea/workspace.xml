@@ -5,49 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c7db0cf-f859-4454-8150-2afa77714773" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/unitravel/bean/BusquedaBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/resources/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/resources/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/resources/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/resultados_busqueda.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/texto.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/PersistenciaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/unitravel/PersistenciaApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Administrador.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/unitravel/entidades/Administrador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/AdministradorHotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/unitravel/entidades/AdministradorHotel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Cama.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/unitravel/entidades/Cama.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Caracteristica.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/unitravel/entidades/Caracteristica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Ciudad.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/unitravel/entidades/Ciudad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/unitravel/entidades/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Comentario.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/unitravel/entidades/Comentario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Denuncia.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/unitravel/entidades/Denuncia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Foto.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/unitravel/entidades/Foto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Habitacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/unitravel/entidades/Habitacion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/unitravel/entidades/Hotel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/unitravel/entidades/Persona.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Punto.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/unitravel/entidades/Punto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Reserva.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/unitravel/entidades/Reserva.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/ReservaHabitacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/unitravel/entidades/ReservaHabitacion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/ReservaSilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/unitravel/entidades/ReservaSilla.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Silla.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/unitravel/entidades/Silla.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Telefono.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/unitravel/entidades/Telefono.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/unitravel/entidades/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/entidades/Vuelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/unitravel/entidades/Vuelo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/CiudadRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/unitravel/repositorios/CiudadRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/ComentarioRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/unitravel/repositorios/ComentarioRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/DenunciaRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/unitravel/repositorios/DenunciaRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/HotelRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/unitravel/repositorios/HotelRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/repositorios/UsuarioRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/unitravel/repositorios/UsuarioRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/servicios/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/unitravel/servicios/EmailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/servicios/UsuarioServicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/unitravel/servicios/UsuarioServicio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/proyecto/servicios/UsuarioServicioImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/main/java/co/edu/uniquindio/unitravel/servicios/UsuarioServicioImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/test/java/co/edu/uniquindio/proyecto/ClienteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/test/java/co/edu/uniquindio/unitravel/ClienteTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/test/java/co/edu/uniquindio/proyecto/HotelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/test/java/co/edu/uniquindio/unitravel/HotelTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/test/java/co/edu/uniquindio/proyecto/UsuarioServicioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/test/java/co/edu/uniquindio/unitravel/UsuarioServicioTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistencia/src/test/java/co/edu/uniquindio/proyecto/UsuarioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/test/java/co/edu/uniquindio/unitravel/UsuarioTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/unitravel/bean/UsuarioBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/unitravel/bean/UsuarioBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/unitravel/bean/UsuariosBean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/unitravel/bean/BusquedaBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/unitravel/bean/BusquedaBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/index.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/webapp/registrar_usuario.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/registrar_usuario.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/resultados_busqueda.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/resultados_busqueda.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -334,7 +297,8 @@
       <workItem from="1654406734932" duration="496000" />
       <workItem from="1654407616939" duration="12075000" />
       <workItem from="1654423994023" duration="10914000" />
-      <workItem from="1654435601403" duration="2025000" />
+      <workItem from="1654435601403" duration="12343000" />
+      <workItem from="1654468459220" duration="15962000" />
     </task>
     <servers />
   </component>
