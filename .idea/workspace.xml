@@ -5,12 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c7db0cf-f859-4454-8150-2afa77714773" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/texto.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/index_logueada.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/logear_usuario.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/unitravel/bean/BusquedaBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/unitravel/bean/BusquedaBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistencia/src/test/java/co/edu/uniquindio/unitravel/UsuarioServicioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistencia/src/test/java/co/edu/uniquindio/unitravel/UsuarioServicioTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/unitravel/bean/UsuarioBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/co/edu/uniquindio/unitravel/bean/UsuarioBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/index.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/webapp/registrar_usuario.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/registrar_usuario.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/resultados_busqueda.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/resultados_busqueda.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/resources/img/icono.png" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/resources/img/icono.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/resources/img/iconos.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/resources/img/iconos.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,29 +132,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.WebApplication">
-    <configuration name="UsuarioServicioTest.enviarCorreo" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":persistencia:test" />
-            <option value="--tests" />
-            <option value="&quot;co.edu.uniquindio.proyecto.UsuarioServicioTest.enviarCorreo&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <configuration name="UsuarioServicioTest.listasReservas" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -221,6 +201,29 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="UsuarioServicioTest.validarLogin" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":persistencia:test" />
+            <option value="--tests" />
+            <option value="&quot;co.edu.uniquindio.unitravel.UsuarioServicioTest.validarLogin&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="PersistenciaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="unitravel.persistencia.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="co.edu.uniquindio.unitravel.PersistenciaApplication" />
@@ -244,7 +247,7 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.UsuarioServicioTest.enviarCorreo" />
+      <item itemvalue="Gradle.UsuarioServicioTest.validarLogin" />
       <item itemvalue="Gradle.UsuarioServicioTest.listasReservas" />
       <item itemvalue="Gradle.UsuarioServicioTest.recuperarContrasenaCorreo (1)" />
       <item itemvalue="Gradle.UsuarioServicioTest.registrarUsuarioTest" />
@@ -254,10 +257,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.WebApplication" />
+        <item itemvalue="Gradle.UsuarioServicioTest.validarLogin" />
         <item itemvalue="Gradle.UsuarioServicioTest.registrarUsuarioTest" />
         <item itemvalue="Gradle.UsuarioServicioTest.recuperarContrasenaCorreo (1)" />
         <item itemvalue="Gradle.UsuarioServicioTest.listasReservas" />
-        <item itemvalue="Gradle.UsuarioServicioTest.enviarCorreo" />
       </list>
     </recent_temporary>
   </component>
@@ -298,7 +301,7 @@
       <workItem from="1654407616939" duration="12075000" />
       <workItem from="1654423994023" duration="10914000" />
       <workItem from="1654435601403" duration="12343000" />
-      <workItem from="1654468459220" duration="15962000" />
+      <workItem from="1654468459220" duration="22907000" />
     </task>
     <servers />
   </component>
@@ -368,6 +371,15 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/persistencia/src/test/java/co/edu/uniquindio/unitravel/UsuarioServicioTest.java</url>
+          <line>38</line>
+          <properties class="co.edu.uniquindio.unitravel.UsuarioServicioTest" method="validarLogin">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.NullPointerException" package="java.lang" />

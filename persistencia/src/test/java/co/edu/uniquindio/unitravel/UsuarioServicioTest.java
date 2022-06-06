@@ -34,12 +34,12 @@ public class UsuarioServicioTest {
 
     }
 //Registrarse y loguearse
-    @Sql("classpath:dataset.sql")
+  // @Sql("classpath:dataset.sql")
     @Test
     public void validarLogin() {
 
         try {
-            usuarioServicio.validarLogin("pedro@email.com","palopero");
+            usuarioServicio.validarLogin("cristhianandres2001@gmail.com","Andres1805?");
             System.out.println("Estas logeado");
         } catch (Exception e) {
             e.printStackTrace();

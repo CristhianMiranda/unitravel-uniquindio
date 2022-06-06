@@ -24,15 +24,17 @@
                 <p:outputLabel style="background: white" value="Email" for="email_usuario"/>
                 <p:inputText id="email_usuario" type="email" value="#{usuarioBean.usuario.email}" required="true"/>
                 <p:outputLabel style="background: white" value="Contrasena" for="contrasena_usuario"/>
-                <p:inputText id="contrasena_usuario" type="email" value="#{usuarioBean.usuario.contraseña}" required="true"/>
+                <p:inputText id="contrasena_usuario" type="contrasena" value="#{usuarioBean.usuario.contraseña}" required="true"/>
 
             </h:panelGrid>
-            <li><a href="index.xhtml">
-            <p:commandButton value="Registrar usuario" action="#{usuarioBean.registrarUsuario()}" update="@form" icon="pi pi-plus"/>
-            </a></li>
-            <p:growl showDetail="true"/>
 
+            <p:commandButton value="Registrar usuario" action="#{usuarioBean.registrarUsuario()}" update="@form" icon="pi pi-plus"/>
+            <p:growl showDetail="true"/>
         </h:form>
+            <li><a href="index.xhtml">Regresar al inicio</a></li>
+
+
+
 
 </h:body>
 </html>

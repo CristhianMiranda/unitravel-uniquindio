@@ -34,6 +34,24 @@ public class UsuarioBean implements Serializable {
         usuario = new Usuario();
     }
 
+    public void validarLogin() throws Exception{
+        try {
+          System.out.println(usuario.toString());
+            usuarioServicio.validarLogin(usuario.getEmail(), usuario.getContraseña());
+         //   System.out.println("OTOARKOSK");
+            FacesMessage facesMsg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Alerta",
+                    "Login exitoso");
+            FacesContext.getCurrentInstance().addMessage(null, facesMsg);
+        } catch (Exception e) {
+            FacesMessage facesMsg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Alerta",
+                    e.getMessage());
+            FacesContext.getCurrentInstance().addMessage(null, facesMsg);
+            e.printStackTrace();
+        }
+
+    }
+
+
     public void registrarUsuario()throws Exception {
         try {
                 usuarioServicio.registraUsuario(usuario);
