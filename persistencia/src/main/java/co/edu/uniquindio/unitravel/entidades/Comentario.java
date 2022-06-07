@@ -25,6 +25,7 @@ public class Comentario implements Serializable {
 
     @Column(nullable = false,length = 220)
     private String comentario;
+
     @Min(0)
     @Max(5)
     @Column(nullable = false)
